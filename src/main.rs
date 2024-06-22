@@ -37,7 +37,16 @@ fn convert(from: &str, value: &str) -> Result<i64, ConversionError> {
 }
 
 fn print(decimal: i64) {
-    println!("{}", binary::from_decimal(decimal));
+    let binary_number = binary::from_decimal(decimal);
+
+    println!(
+        "({}) bits",
+        binary_number
+            .chars()
+            .filter(|&c| c == '1' || c == '0')
+            .count()
+    );
+    println!("{}", binary_number);
     println!("{}", decimal::from_decimal(decimal));
     println!("{}", hexadecimal::from_decimal(decimal));
 }
