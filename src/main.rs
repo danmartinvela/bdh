@@ -13,7 +13,7 @@ fn main() {
     // // bdh -out b
     // // bdh -in b -out h
     if args.len() != 3 {
-        eprintln!("Example: bdh -b 3FF");
+        eprintln!("Example: bdh -h 3FF");
         process::exit(1);
     }
 
